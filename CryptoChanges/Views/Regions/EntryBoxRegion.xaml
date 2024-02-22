@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CryptoChanges.Views.Regions.EntryBoxRegion"
+             xmlns:control="clr-namespace:CryptoChanges.Controls"
+             xmlns:strings="clr-namespace:CryptoChanges.Resources.Strings"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="Automatic"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{DynamicResource HighBackground}">
+
+
+    <Grid RowSpacing="50"
+                      ColumnSpacing="20"
+                      Padding="0,15,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <control:EntryBoxControl Grid.Row="0"
+                                         Grid.Column="0"
+                                         HorizontalOptions="FillAndExpand"
+                                         InputText="{Binding Filter.MinVolume, Mode=TwoWay}"
+                                         ErrorText="{loc:Translate Only_numbers}"
+                                         LabelName="{loc:Translate Minimum_volume}"
+                                         ToolTipProperties.Text="{loc:Translate Minimum_amount}"
+                                         SelectedType="digit"
+                                         Round="0"
+                                         BorderThinck="1"
+                                         IsValid="{Binding IsValidInput, Mode=TwoWay}"
+                                         Text_Color="{DynamicResource entry_Text}"
+                                         LabelColor="{DynamicResource entry_Label}"
+                                         BorderColor="{DynamicResource entry_Border}"
+                                         Background_Color="{DynamicResource entry_Background}"/>
+
+        <control:EntryBoxControl Grid.Row="1"
+                                         Grid.Column="0"
+                                         HorizontalOptions="FillAndExpand"
+                                         InputText="{Binding Filter.MaxComission, Mode=TwoWay}"
+                                         ErrorText="{loc:Translate Only_numbers}"
+                                         LabelName="{loc:Translate Maximum_commission}"
+                                         ToolTipProperties.Text="{loc:Translate Maximum_commission}"
+                                         SelectedType="digit"
+                                         Round="0"
+                                         BorderThinck="1"
+                                         IsValid="{Binding IsValidInput, Mode=TwoWay}"
+                                         Text_Color="{DynamicResource entry_Text}"
+                                         LabelColor="{DynamicResource entry_Label}"
+                                         BorderColor="{DynamicResource entry_Border}"
+                                         Background_Color="{DynamicResource entry_Background}"/>
+
+        <control:EntryBoxControl Grid.Row="0"
+                                         Grid.Column="1"
+                                         HorizontalOptions="FillAndExpand"
+                                         InputText="{Binding Filter.MaxVolume, Mode=TwoWay}"
+                                         ErrorText="{loc:Translate Only_numbers}"
+                                         LabelName="{loc:Translate Maximum_volume}"
+                                         ToolTipProperties.Text="{loc:Translate Maximum_volume}"
+                                         SelectedType="digit"
+                                         Round="0"
+                                         BorderThinck="1"
+                                         IsValid="{Binding IsValidInput, Mode=TwoWay}"
+                                         Text_Color="{DynamicResource entry_Text}"
+                                         LabelColor="{DynamicResource entry_Label}"
+                                         BorderColor="{DynamicResource entry_Border}"
+                                         Background_Color="{DynamicResource entry_Background}"/>
+
+        <control:EntryBoxControl Grid.Row="1"
+                                         Grid.Column="1"
+                                         HorizontalOptions="FillAndExpand"
+                                         InputText="{Binding Filter.Hedging, Mode=TwoWay}"
+                                         ErrorText="{loc:Translate Only_numbers}"
+                                         LabelName="{loc:Translate Hedging}"
+                                         ToolTipProperties.Text="{loc:Translate Hedging}"
+                                         SelectedType="digit"
+                                         Round="0"
+                                         BorderThinck="1"
+                                         IsValid="{Binding IsValidInput, Mode=TwoWay}"
+                                         Text_Color="{DynamicResource entry_Text}"
+                                         LabelColor="{DynamicResource entry_Label}"
+                                         BorderColor="{DynamicResource entry_Border}"
+                                         Background_Color="{DynamicResource entry_Background}"/>
+
+        <control:EntryBoxControl Grid.Row="0"
+                                         Grid.Column="2"
+                                         HorizontalOptions="FillAndExpand"
+                                         InputText="{Binding Filter.Sum, Mode=TwoWay}"
+                                         ErrorText="{loc:Translate Only_numbers}"
+                                         LabelName="{loc:Translate Profit}"
+                                         ToolTipProperties.Text="{loc:Translate Sum}"
+                                         SelectedType="digit"
+                                         Round="0"
+                                         BorderThinck="1"
+                                         IsValid="{Binding IsValidInput, Mode=TwoWay}"
+                                         Text_Color="{DynamicResource entry_Text}"
+                                         LabelColor="{DynamicResource entry_Label}"
+                                         BorderColor="{DynamicResource entry_Border}"
+                                         Background_Color="{DynamicResource entry_Background}"/>
+
+        <control:EntryBoxControl Grid.Row="1"
+                                         Grid.Column="2"
+                                         HorizontalOptions="FillAndExpand"
+                                         InputText="{Binding Filter.PeriodUpdate, Mode=TwoWay}"
+                                         ErrorText="{loc:Translate Only_numbers}"
+                                         LabelName="{loc:Translate Update_period}"
+                                         ToolTipProperties.Text="{loc:Translate Seconds}"
+                                         SelectedType="digit"
+                                         Round="0"
+                                         BorderThinck="1"
+                                         IsValid="{Binding IsValidInput, Mode=TwoWay}"
+                                         Text_Color="{DynamicResource entry_Text}"
+                                         LabelColor="{DynamicResource entry_Label}"
+                                         BorderColor="{DynamicResource entry_Border}"
+                                         Background_Color="{DynamicResource entry_Background}"/>
+
+        <control:EntryBoxControl Grid.Row="0"
+                                         Grid.Column="3"
+                                         HorizontalOptions="FillAndExpand"
+                                         InputText="{Binding Filter.Spread, Mode=TwoWay}"
+                                         ErrorText="{loc:Translate Only_numbers}"
+                                         LabelName="{loc:Translate Spread}"
+                                         ToolTipProperties.Text="{loc:Translate Spread}"
+                                         SelectedType="digit"
+                                         Round="0"
+                                         BorderThinck="1"
+                                         IsValid="{Binding IsValidInput, Mode=TwoWay}"
+                                         Text_Color="{DynamicResource entry_Text}"
+                                         LabelColor="{DynamicResource entry_Label}"
+                                         BorderColor="{DynamicResource entry_Border}"
+                                         Background_Color="{DynamicResource entry_Background}"/>
+
+
+                   <Button Grid.Row="1"
+                           Grid.Column="3"
+                             VerticalOptions="Center"
+                             BackgroundColor="{DynamicResource combo_Background}"
+                             HeightRequest="45"
+                             HorizontalOptions="Fill"
+                             FontSize="12"
+                             TextColor="{DynamicResource combo_Text}"
+                             Text="{Binding SelectListInpOut0}"
+                             BorderColor="{DynamicResource combo_BorderColor}"
+                             BorderWidth="1"
+                             CornerRadius="0"
+                             Command="{Binding ComboBoxBtn}"
+                             CommandParameter="InpOutList"/>
+
+          <Button Grid.Row="0"
+                           Grid.Column="4"                          
+                             HeightRequest="45"
+                             HorizontalOptions="Fill"
+                             VerticalOptions="Center"
+                             FontSize="12"
+                           Text="{Binding SelectListCoins0, Mode=TwoWay}"
+                           BackgroundColor="{DynamicResource combo_Background}"
+                           TextColor="{DynamicResource combo_Text}"
+                           BorderColor="{DynamicResource combo_BorderColor}"
+                             BorderWidth="1"
+                             CornerRadius="0"
+                             Command="{Binding ComboBoxBtn}"
+                             CommandParameter="Coins0"/>
+
+          <Button Grid.Row="0"
+                           Grid.Column="5"
+                           HeightRequest="45"
+                             HorizontalOptions="Fill"
+                             VerticalOptions="Center"
+                             FontSize="12"
+                           Text="{Binding SelectListCoins1, Mode=TwoWay}"
+                           BackgroundColor="{DynamicResource combo_Background}"
+                           TextColor="{DynamicResource combo_Text}"
+                           BorderColor="{DynamicResource combo_BorderColor}"
+                             BorderWidth="1"
+                             CornerRadius="0"
+                             Command="{Binding ComboBoxBtn}"
+                             CommandParameter="Coins1"/>
+
+        
+        <CheckBox Grid.Row="1"
+                  Grid.Column="4"
+                  Color="{DynamicResource cb_Color}"
+                  VerticalOptions="Center"
+                  HorizontalOptions="Start"
+                  IsChecked="{Binding Filter.BigRisk}"/>
+        <Label Grid.Row="1"
+               Grid.Column="4"
+               Text="{loc:Translate Big_risk}"
+               TextColor="{DynamicResource cb_Label}"
+               FontSize="12"
+                  VerticalOptions="Center"
+                  HorizontalOptions="Center"/>
+
+        <Switch Grid.Row="1"
+                Grid.Column="5"
+                ThumbColor="{DynamicResource sw_ThumbColor}"
+                OnColor="{DynamicResource sw_OnColor}"
+                BackgroundColor="{DynamicResource sw_Background}"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                IsToggled="{Binding Filter.IsNotify}"/>
+        <Label Grid.Row="1"
+               Grid.Column="5"
+               Text="{loc:Translate Notifications}"
+               TextColor="{DynamicResource sw_Label}"
+               FontSize="12"
+               VerticalOptions="Center"
+               HorizontalOptions="End"/>
+
+        <Button Grid.Row="1"
+                Grid.Column="6"
+                Text="{loc:Translate Apply}"
+                TextColor="{DynamicResource beb_Text}"
+                FontSize="14"
+                BackgroundColor="{DynamicResource beb_Background}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Command="{Binding EntryBoxApply}"/>
+
+    </Grid>
+</ContentView>

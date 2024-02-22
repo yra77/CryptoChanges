@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="Automatic"
+             xmlns:strings="clr-namespace:CryptoChanges.Resources.Strings"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             x:Class="CryptoChanges.Views.Regions.ListResult"
+             prism:Navigation.CanNavigate="False"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <ListView x:Name="lr_listview"
+              HorizontalOptions="Fill"
+              IsPullToRefreshEnabled="True"
+              VerticalOptions="FillAndExpand"
+              SelectionMode="None" 
+              SeparatorVisibility="Default"
+              BackgroundColor="{DynamicResource lr_Background}"
+              ItemsSource="{Binding ListResult}">
+
+        <!--Header-->
+        <ListView.Header>
+          
+          <Grid ColumnDefinitions="1.5*,1*,1*,1*,1*,1.5*,1*,1*,1*,1*,1*,1*,1*,1*">
+            
+            <Frame Grid.Column="0"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Coin}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+              <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColumnHeader}"
+                                      CommandParameter="Id"/>
+              </Frame.GestureRecognizers>
+            </Frame>
+            
+            <Frame Grid.Column="1"
+                   Padding="5"
+                   CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Exchange}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+              <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColumnHeader}"
+                                      CommandParameter="Exchange"/>
+              </Frame.GestureRecognizers>
+            </Frame>
+              
+            <Frame Grid.Column="2"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Volume}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+              <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColumnHeader}"
+                                      CommandParameter="Volume"/>
+              </Frame.GestureRecognizers>
+            </Frame>
+
+              <Frame Grid.Column="3"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Spread}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+              <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColumnHeader}"
+                                      CommandParameter="Spread"/>
+              </Frame.GestureRecognizers>
+            </Frame>
+
+                <Frame Grid.Column="4"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Price}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+              <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColumnHeader}"
+                                      CommandParameter="Price"/>
+              </Frame.GestureRecognizers>
+            </Frame>
+
+                <Frame Grid.Column="5"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Range}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+                <Frame Grid.Column="6"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Order}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+               <Frame Grid.Column="7"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate ComissionSpot}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+               <Frame Grid.Column="8"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate ComissionNetwork}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+               <Frame Grid.Column="9"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Network}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+               <Frame Grid.Column="10"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Time}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+               <Frame Grid.Column="11"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Time_of_lives}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+               <Frame Grid.Column="12"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Futures}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+               <Frame Grid.Column="13"
+                 Padding="5"
+                 CornerRadius="0"
+                 HasShadow="False"
+                 BorderColor="{DynamicResource lr_listHeaderBorder}"
+                 BackgroundColor="{DynamicResource lr_listHeaderBackground}">
+              <Label Text="{loc:Translate Margin}"
+                     TextColor="{DynamicResource lr_listHeaderText}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontAttributes="Bold"
+                     FontSize="12"/>
+            </Frame>
+
+          </Grid>
+        </ListView.Header>
+
+        <!--Base content-->
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+
+                <Grid ColumnDefinitions="1.5*,1*,1*,1*,1*,1.5*,1*,1*,1*,1*,1*,1*,1*,1*"
+                      VerticalOptions="CenterAndExpand">
+
+                  <Label Grid.Column="0" Text="{Binding Coin}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                  <Label Grid.Column="1" Text="{Binding Name}" HorizontalOptions="Center"/>
+                  <Label Grid.Column="2" Text="{Binding Volume}" HorizontalOptions="Center"/>
+                  <Label Grid.Column="3" Text="{Binding Spread}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                  <Label Grid.Column="4" Text="{Binding Price}" HorizontalOptions="Center"/>
+                  <Label Grid.Column="5" Text="{Binding Range}" HorizontalOptions="Center"/>
+                  <Label Grid.Column="6" Text="{Binding Order}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                  <Label Grid.Column="7" Text="{Binding ComissionSpot}" HorizontalOptions="Center"/>
+                  <Label Grid.Column="8" Text="{Binding ComissionNetwork}" HorizontalOptions="Center"/>
+                  <Label Grid.Column="9" Text="{Binding Network}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                  <Label Grid.Column="10" Text="{Binding Time}" HorizontalOptions="Center"/>
+                  <Label Grid.Column="11" Text="{Binding Time_of_lives}" HorizontalOptions="Center"/>
+                  <Label Grid.Column="12" Text="{Binding Futures}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                  <CheckBox Grid.Column="13" HorizontalOptions="Center" IsChecked="{Binding Margin}"/>
+
+                  <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindingContext.ItemSelect, Source={x:Reference lr_listview}}"
+                                          CommandParameter="{Binding }"/>
+                  </Grid.GestureRecognizers>
+
+                </Grid>
+
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+
+      </ListView>
+</ContentView>

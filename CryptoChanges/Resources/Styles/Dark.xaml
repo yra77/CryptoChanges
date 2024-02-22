@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CryptoChanges.Resources.Styles.Dark">
+    
+
+     <Color x:Key="Primary">#512BD4</Color>
+    <Color x:Key="Secondary">#DFD8F7</Color>
+    <Color x:Key="Tertiary">#2B0B98</Color>
+
+
+    <Color x:Key="HighText">White</Color>
+    <Color x:Key="HighBackground">Black</Color>
+    <Color x:Key="BackgroundTransparent">Transparent</Color>
+    
+    <!--Image button-->
+    <Color x:Key="ib_Background">LightGray</Color>
+
+    <!--combo modal-->
+    <Color x:Key="cm_Background">Transparent</Color>
+    <Color x:Key="cm_BorderColor">White</Color>
+    <Color x:Key="cm_ShadowColor">Gray</Color>
+    <Color x:Key="cm_ListBackground">LightGray</Color>
+    <Color x:Key="cm_ListText">Black</Color>
+
+    <!--ComboBox-->
+    <Color x:Key="combo_Background">Transparent</Color>
+    <Color x:Key="combo_BorderColor">Gray</Color>
+    <Color x:Key="combo_Text">Gray</Color>
+
+    <!--checbox-->
+    <Color x:Key="cb_Color">White</Color>
+
+    <!--MarketList-->
+    <Color x:Key="ml_TextColor">White</Color>
+    <Color x:Key="ml_Background">Transparent</Color>
+
+    <!--switch menu-->
+    <Color x:Key="swm_Background">Transparent</Color>
+    <Color x:Key="swm_ThumbColor">White</Color>
+    <Color x:Key="swm_OnColor">DarkGray</Color>
+
+    <!--switch-->
+    <Color x:Key="sw_Background">Transparent</Color>
+    <Color x:Key="sw_ThumbColor">White</Color>
+    <Color x:Key="sw_OnColor">DarkGray</Color>
+
+    <!--button entrybox-->
+    <Color x:Key="beb_Text">Black</Color>
+    <Color x:Key="beb_Background">White</Color>
+
+    <!--entry-->
+    <Color x:Key="entry_Label">#ACACAC</Color>
+    <Color x:Key="entry_Text">Black</Color>
+    <Color x:Key="entry_Border">Gray</Color>
+    <Color x:Key="entry_Background">Transparent</Color>
+    
+    <!--picker lang-->
+    <Color x:Key="pl_Background">Transparent</Color>
+    <Color x:Key="pl_Text">White</Color>
+    
+    <!--List result-->
+    <Color x:Key="lr_Background">Transparent</Color>
+    <Color x:Key="lr_listHeaderBorder">Gray</Color>
+    <Color x:Key="lr_listHeaderBackground">Transparent</Color>
+    <Color x:Key="lr_listHeaderText">White</Color>
+
+</ResourceDictionary>

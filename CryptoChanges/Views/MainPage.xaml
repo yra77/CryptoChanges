@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="Automatic"
+             x:Class="CryptoChanges.Views.MainPage"
+             xmlns:control="clr-namespace:CryptoChanges.Controls"
+             xmlns:region="clr-namespace:CryptoChanges.Views.Regions"
+             xmlns:strings="clr-namespace:CryptoChanges.Resources.Strings"
+             xmlns:loc="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             prism:Navigation.CanNavigate="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{DynamicResource HighBackground}"
+              x:Name="MyPage"
+             Title="Main">
+
+
+    <ScrollView>
+        <Grid>
+            <VerticalStackLayout Spacing="80"
+                             Padding="15"
+                             VerticalOptions="Fill">
+
+                <!--#region state line-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0"
+                           Text="{loc:Translate Title}"
+                   TextColor="{DynamicResource HighText}"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+
+                     <Button Grid.Column="1"
+                             VerticalOptions="Center"
+                             BackgroundColor="{DynamicResource pl_Background}"
+                             HeightRequest="45"
+                             HorizontalOptions="Fill"
+                             FontSize="12"
+                             TextColor="{DynamicResource pl_Text}"
+                             Text="{Binding SelectLanguage}"
+                             BorderColor="{DynamicResource pl_Background}"
+                             BorderWidth="1"
+                             CornerRadius="0"
+                             Command="{Binding ComboBoxBtn}"
+                             CommandParameter="Language"/>
+
+                    <Switch Grid.Column="2"
+                        Scale="0.7"
+                        ThumbColor="{DynamicResource swm_ThumbColor}"
+                        OnColor="{DynamicResource swm_OnColor}"
+                        BackgroundColor="{DynamicResource swm_Background}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Margin="0,0,20,0"
+                        IsToggled="{Binding IsDarkTheme}"/>
+                    <Label Grid.Column="2"
+                           Text="{loc:Translate Theme}"
+                           FontSize="12"
+                           TextColor="{DynamicResource HighText}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="End"/>
+
+                    <ImageButton Grid.Column="3"
+                             Source="bell.png"
+                             BackgroundColor="{DynamicResource ib_Background}"
+                             CornerRadius="15"
+                                 Scale="0.8"
+                                 WidthRequest="35"
+                                 HeightRequest="35"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"/>
+
+                    <ImageButton Grid.Column="4"
+                              Source="user_circle.png"
+                              BackgroundColor="{DynamicResource ib_Background}"
+                              WidthRequest="42"
+                              HeightRequest="42"
+                              CornerRadius="20"
+                              VerticalOptions="Center"
+                              HorizontalOptions="Center"/>
+
+                </Grid>
+                <!--#endregion-->
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="{loc:Translate Select_exchanges}"
+                   TextColor="{DynamicResource HighText}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"/>
+
+                    <control:MarketListControl ItemsList="{Binding Markets, Mode=TwoWay}"
+                                           Text_Color="{DynamicResource ml_TextColor}"
+                                           Background_Color="{DynamicResource ml_Background}"/>
+
+                </VerticalStackLayout>
+
+
+                <VerticalStackLayout Spacing="25">
+
+                    <Label Text="{loc:Translate Select_options}"
+                   TextColor="{DynamicResource HighText}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"/>
+
+                    <region:EntryBoxRegion/>
+
+                </VerticalStackLayout>
+
+                <!--#region result-->
+                <VerticalStackLayout Spacing="25">
+
+                    <Label Text="{loc:Translate Result}"
+                   TextColor="{DynamicResource HighText}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"/>
+
+                <region:ListResult HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="Center"/>
+
+                </VerticalStackLayout>
+                <!--#endregion-->
+
+            </VerticalStackLayout>
+
+
+            <!--#region Modal combo-->
+            <Grid MinimumHeightRequest="200"
+                  MinimumWidthRequest="180"
+                  BackgroundColor="{DynamicResource cm_Background}"
+                  HorizontalOptions="Fill"
+                  VerticalOptions="Fill"
+                  IsVisible="{Binding IsComboVisible}"
+                  ZIndex="99999">
+
+                <Border HorizontalOptions="Center"
+                          VerticalOptions="Center"
+                          WidthRequest="200"
+                        BackgroundColor="{DynamicResource cm_Background}"
+                        StrokeThickness="2"
+                        Stroke="{DynamicResource cm_BorderColor}">
+                    <Border.Shadow>
+                        <Shadow Brush="{DynamicResource cm_ShadowColor}"
+                Offset="5,5"
+                Radius="0"
+                Opacity="0.2" />
+                    </Border.Shadow>
+
+                    <VerticalStackLayout Spacing="20"
+                                         BackgroundColor="{DynamicResource cm_ListBackground}">
+                    <ListView x:Name="listview"
+                          ItemsSource="{Binding ListInpOut}"
+                          BackgroundColor="{DynamicResource cm_ListBackground}"
+                          SeparatorVisibility="None"
+                          SelectionMode="Single"
+                          MaximumHeightRequest="300"
+                          HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                <Grid HorizontalOptions="Fill">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Text="{Binding Name}"
+                                       FontSize="14"
+                                       HorizontalTextAlignment="Start"
+                                      TextColor="{DynamicResource cm_ListText}"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"
+                                       Margin="10,0,0,0"/>
+                                    <CheckBox Grid.Column="1"
+                                              BackgroundColor="Transparent"
+                                              Color="{DynamicResource ml_TextColor}"
+                                              IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                                              VerticalOptions="Center"
+                                              HorizontalOptions="Center" 
+                                              IsVisible="{Binding  BindingContext.IsComboSubVisible, Source={x:Reference listview}}"/>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                       Command="{Binding BindingContext.SelectCombo, Source={x:Reference listview}}"
+                                      CommandParameter="{Binding Name}"/>
+                                    </Grid.GestureRecognizers> 
+                                    </Grid>
+                                    </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+                    <Button Text="Ok"
+                            VerticalOptions="End"
+                            HorizontalOptions="Fill"
+                            TextColor="{DynamicResource beb_Text}"
+                            FontSize="14"
+                            BackgroundColor="{DynamicResource beb_Background}"
+                            Command="{Binding SelectCombo}"
+                            CommandParameter="done"
+                            IsVisible="{Binding IsComboSubVisible}"/>
+                        </VerticalStackLayout>
+                </Border>
+            </Grid>
+            <!--#endregion-->
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

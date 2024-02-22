@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+ <data name="Title" xml:space="preserve">
+    <value>Interexchange scanner</value>
+  </data>
+  
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+
+  <data name="Select_exchanges" xml:space="preserve">
+    <value>Select exchanges</value>
+  </data>
+
+   <data name="Select_options" xml:space="preserve">
+    <value>Select options</value>
+  </data>
+
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+
+  <data name="Only_numbers" xml:space="preserve">
+    <value>Only numbers</value>
+  </data>
+
+   <data name="Minimum_volume" xml:space="preserve">
+    <value>Minimum volume $</value>
+  </data>
+
+   <data name="Minimum_amount" xml:space="preserve">
+    <value>Minimum amount $</value>
+  </data>
+
+   <data name="Maximum_commission" xml:space="preserve">
+    <value>Maximum commission $</value>
+  </data>
+
+  <data name="Maximum_volume" xml:space="preserve">
+    <value>Maximum volume $</value>
+  </data>
+
+  <data name="Hedging" xml:space="preserve">
+    <value>Hedging</value>
+  </data>
+
+   <data name="Profit" xml:space="preserve">
+    <value>Profit $</value>
+  </data>
+
+  <data name="Sum" xml:space="preserve">
+    <value>Sum $</value>
+  </data>
+
+  <data name="Update_period" xml:space="preserve">
+    <value>Update period</value>
+  </data>
+
+   <data name="Seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+
+  <data name="Spread" xml:space="preserve">
+    <value>Spread %</value>
+  </data>
+
+  <data name="Big_risk" xml:space="preserve">
+    <value>Big risk</value>
+  </data>
+
+   <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+
+    <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+
+   <data name="Availability_of_transfers" xml:space="preserve">
+    <value>Availability of transfers</value>
+  </data>
+
+   <data name="Blacklist_of_coins" xml:space="preserve">
+    <value>Blacklist of coins</value>
+  </data>
+
+   <data name="Black_list_of_networks" xml:space="preserve">
+    <value>Black list of networks</value>
+  </data>
+
+  <data name="Input_Output" xml:space="preserve">
+    <value>Input, output</value>
+  </data>
+  
+   <data name="Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+
+   <data name="Output" xml:space="preserve">
+    <value>Output</value>
+  </data>
+
+   <data name="Coin" xml:space="preserve">
+    <value>Coin</value>
+  </data>
+
+  <data name="Exchange" xml:space="preserve">
+    <value>Exchange</value>
+  </data>
+
+   <data name="Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+
+  <data name="Spread" xml:space="preserve">
+    <value>Spread</value>
+  </data>
+
+   <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+
+   <data name="Range" xml:space="preserve">
+    <value>Range</value>
+  </data>
+
+   <data name="Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+
+   <data name="ComissionSpot" xml:space="preserve">
+    <value>Comission Spot</value>
+  </data>
+
+   <data name="ComissionNetwork" xml:space="preserve">
+    <value>Comission network</value>
+  </data>
+
+  <data name="Network" xml:space="preserve">
+    <value>Network</value>
+  </data>
+
+   <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+
+   <data name="Time_of_lives" xml:space="preserve">
+    <value>Time of lives</value>
+  </data>
+
+  <data name="Futures" xml:space="preserve">
+    <value>Futures</value>
+  </data>
+
+   <data name="Margin" xml:space="preserve">
+    <value>Margin</value>
+  </data>
+
+</root>

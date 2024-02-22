@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+ <data name="Title" xml:space="preserve">
+    <value>Міжбіржовий сканер</value>
+  </data>
+
+  <data name="Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+
+  <data name="Select_exchanges" xml:space="preserve">
+    <value>Виберіть біржі</value>
+  </data>
+
+   <data name="Select_options" xml:space="preserve">
+    <value>Виберіть параметри</value>
+  </data>
+
+ <data name="Result" xml:space="preserve">
+    <value>Результат</value>
+  </data>
+
+  <data name="Only_numbers" xml:space="preserve">
+    <value>Тільки цифри</value>
+  </data>
+
+   <data name="Minimum_volume" xml:space="preserve">
+    <value>Мінімальний обʼєм $</value>
+  </data>
+
+  <data name="Minimum_amount" xml:space="preserve">
+    <value>Мінімальна сума $</value>
+  </data>
+
+  <data name="Maximum_commission" xml:space="preserve">
+    <value>Максимальна комісія $</value>
+  </data>
+
+   <data name="Maximum_volume" xml:space="preserve">
+    <value>Максимальний об`єм $</value>
+  </data>
+
+  <data name="Hedging" xml:space="preserve">
+    <value>Хеджированіє</value>
+  </data>
+
+  <data name="Profit" xml:space="preserve">
+    <value>Прибуток $</value>
+  </data>
+
+  <data name="Sum" xml:space="preserve">
+    <value>Сума $</value>
+  </data>
+
+  <data name="Update_period" xml:space="preserve">
+    <value>Період оновлення</value>
+  </data>
+
+  <data name="Seconds" xml:space="preserve">
+    <value>Секунди</value>
+  </data>
+
+  <data name="Spread" xml:space="preserve">
+    <value>Спред %</value>
+  </data>
+
+  <data name="Big_risk" xml:space="preserve">
+    <value>Великий ризик</value>
+  </data>
+
+   <data name="Notifications" xml:space="preserve">
+    <value>Сповіщення</value>
+  </data>
+
+  <data name="Apply" xml:space="preserve">
+    <value>Застосувати</value>
+  </data>
+
+  <data name="Availability_of_transfers" xml:space="preserve">
+    <value>Доступність перевода</value>
+  </data>
+
+  <data name="Blacklist_of_coins" xml:space="preserve">
+    <value>Чорний список монет</value>
+  </data>
+
+   <data name="Black_list_of_networks" xml:space="preserve">
+    <value>Чорний список мереж</value>
+  </data>
+
+   <data name="Input_Output" xml:space="preserve">
+    <value>Ввід, вивід</value>
+  </data>
+
+   <data name="Input" xml:space="preserve">
+    <value>Ввід</value>
+  </data>
+
+   <data name="Output" xml:space="preserve">
+    <value>Вивід</value>
+  </data>
+  
+  <data name="Coin" xml:space="preserve">
+    <value>Монета</value>
+  </data>
+
+  <data name="Exchange" xml:space="preserve">
+    <value>Біржа</value>
+  </data>
+
+   <data name="Volume" xml:space="preserve">
+    <value>Обʼєм</value>
+  </data>
+
+  <data name="Spread" xml:space="preserve">
+    <value>Спред</value>
+  </data>
+
+   <data name="Price" xml:space="preserve">
+    <value>Ціна</value>
+  </data>
+
+   <data name="Range" xml:space="preserve">
+    <value>Діапазон</value>
+  </data>
+
+   <data name="Order" xml:space="preserve">
+    <value>Ордер</value>
+  </data>
+
+   <data name="ComissionSpot" xml:space="preserve">
+    <value>Комісія спота</value>
+  </data>
+
+   <data name="ComissionNetwork" xml:space="preserve">
+    <value>Комісія мережі</value>
+  </data>
+
+  <data name="Network" xml:space="preserve">
+    <value>Мережа</value>
+  </data>
+
+   <data name="Time" xml:space="preserve">
+    <value>Час</value>
+  </data>
+
+   <data name="Time_of_lives" xml:space="preserve">
+    <value>Час життя</value>
+  </data>
+
+  <data name="Futures" xml:space="preserve">
+    <value>Ф'ючерси</value>
+  </data>
+
+   <data name="Margin" xml:space="preserve">
+    <value>Маржа</value>
+  </data>
+   
+</root>
